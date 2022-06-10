@@ -1,16 +1,20 @@
 var assert = require('assert');
-describe('Array', function () {
-    describe('indexOf()', function () {
-        it('should return -1 when the value is not present', function () {
-            assert.equal([1, 2, 3].indexOf(4), -1);
-            });
-        });
-    describe('pop()', function () {
-        it('should return ', function () {
-            var testArray = [1, 3, 4, 6, 7]
-            var item = testArray.pop()
-            assert.equal(item , 7);
-            assert.equal(testArray.length , 4);
-            });
-        });
+var add = require('../index.js').add
+var subtract = require('../index.js').subtract
+describe('add()', function () {
+    it('should add two number', function () {
+        var result = add(2,4)
+        assert.equal(6, result);
+    });
+    
+    it('should add two number', function () {
+        var result = add(2,4)
+        assert.notEqual('w', result);
+});
+});
+describe('subtract()', function () {
+    it('should subtract right param from left param', function () {
+        var result = subtract(10,5)
+        assert.equal(5, result);
+    });
     });
